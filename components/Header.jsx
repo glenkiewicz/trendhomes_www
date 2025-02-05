@@ -26,7 +26,7 @@ export default function () {
 
 	return (
 		<header
-			className={`w-full relative h-24 lg:fixed top-0 left-0 flex items-center justify-between lg:px-10 z-20 transition-all bg-[#010101] lg:bg-transparent ${
+			className={`w-full relative h-24 lg:fixed top-0 left-0 flex items-center justify-between lg:px-10 z-20 transition-all max-lg:bg-[#010101] lg:bg-transparent ${
 				isScrolled ? "lg:bg-[#010101] shadow-md" : "h-auto"
 			}`}
 		>
