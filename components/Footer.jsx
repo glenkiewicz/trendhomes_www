@@ -75,7 +75,7 @@ export default function Footer() {
 				<nav>
 					<ul className="flex text-white space-x-6 font-light">
 						<li>
-							<Link href="">Politka cookies</Link>
+							<Link href="">Polityka cookies</Link>
 						</li>
 						<li>
 							<Link href="">Mapa strony</Link>
