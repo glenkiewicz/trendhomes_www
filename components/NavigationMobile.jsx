@@ -35,7 +35,7 @@ export const NavigationMobile = () => {
 	];
 
 	return (
-		<div className="lg:hidden px-4">
+		<div className="lg:hidden px-4 h-full">
 			<Hamburger
 				toggled={isOpen}
 				size={30}
@@ -49,7 +49,7 @@ export const NavigationMobile = () => {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.2 }}
-						className="fixed left-0 shadow-4xl right-0 top-[96px] p-5 h-full z-50 bg-[#010101] opacity-100"
+						className="absolute left-0 shadow-4xl right-0 top-[96px] p-5 h-screen z-50 bg-[#010101] opacity-100"
 					>
 						<ul className="grid gap-2">
 							{routes.map((route, idx) => {

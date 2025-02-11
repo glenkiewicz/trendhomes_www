@@ -31,7 +31,7 @@ export default function Home() {
 						>
 							<Link
 								href="#"
-								className="relative overflow-hidden transition-all duration-500 text-white my-10 px-6 py-4 bg-[#F7902B] max-w-[280px] uppercase font-bold flex items-center justify-center before:block before:absolute before:top-0 before:-left-[100%] before:w-full before:h-full before:bg-white hover:before:left-0 before:duration-500 before:z-0 hover:ease-in-out hover:text-[#101010]"
+								className="relative overflow-hidden transition-all duration-500 text-white my-10 px-6 py-4 bg-[#F7902B] max-w-[280px] uppercase font-bold flex items-center justify-center before:block before:absolute before:top-0 before:-left-[100%] before:w-full before:h-full before:bg-white hover:before:left-0 before:duration-500 before:z-0 hover:ease-in-out hover:text-[#010101]"
 							>
 								<span className="z-10">
 									Zobacz nasze produkty
