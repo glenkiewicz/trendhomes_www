@@ -19,7 +19,7 @@ export default function Home() {
 							<br />
 							<motion.div
 								whileInView={{ opacity: 1 }}
-								className="opacity-0"
+								className="opacity-0 text-2xl"
 							>
 								Twój partner w kreowaniu nowoczesnych i
 								funkcjonalnych przestrzeni!
@@ -39,7 +39,7 @@ export default function Home() {
 							</Link>
 						</motion.div>
 					</div>
-					<div className="w-0 h-0 border-t-[53.25rem] border-t-transparent border-l-[175px] border-l-[#010101] border-b-[0px] border-b-transparent absolute top-0 -right-[175px] z-0 "></div>
+					<div className="w-0 h-0 border-t-[53.25rem] border-t-transparent border-l-[175px] border-l-[#010101] border-b-[0px] border-b-transparent absolute top-0 -right-[172px] z-0 "></div>
 				</div>
 				<div className="w-full lg:w-2/3 flex self-stretch justify-end ">
 					<Image
