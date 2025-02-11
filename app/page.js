@@ -1,3 +1,4 @@
+import Blog from "@/components/Blog";
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";
@@ -376,86 +377,8 @@ export default function Home() {
 					<p className="text-center text-[#010101]">
 						Przeczytaj jakie mamy dla Ciebie porady i inspiracje
 					</p>
-					<div className="w-full flex flex-col lg:flex-row flex-wrap justify-center gap-10 py-10">
-						<motion.div
-							initial={{ opacity: 0, y: 40 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							className="lg:max-w-[300px]"
-						>
-							<Image
-								src="/img/news1.webp"
-								alt=""
-								width={400}
-								height={400}
-								className="w-full lg:w-[400px]"
-							/>
-							<span className="text-[#010101] font-light text-sm my-2 block">
-								04.01.2025
-							</span>
-							<h3 className="text-[#010101] font-semibold text-xl">
-								Nowoczesne trendy w stolarce okiennej i
-								drzwiowej na rok 2025
-							</h3>
-						</motion.div>
-						<motion.div
-							initial={{ opacity: 0, y: 40 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							className="lg:max-w-[300px]"
-						>
-							<Image
-								src="/img/news2.webp"
-								alt=""
-								width={400}
-								height={400}
-								className="w-full lg:w-[400px]"
-							/>
-							<span className="text-[#010101] font-light text-sm my-2 block">
-								29.12.2024
-							</span>
-							<h3 className="text-[#010101] font-semibold text-xl">
-								Jak dobrać okna do stylu domu? Poradnik dla
-								każdego
-							</h3>
-						</motion.div>
-						<motion.div
-							initial={{ opacity: 0, y: 40 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							className="lg:max-w-[300px]"
-						>
-							<Image
-								src="/img/news3.webp"
-								alt=""
-								width={400}
-								height={400}
-								className="w-full lg:w-[400px]"
-							/>
-							<span className="text-[#010101] font-light text-sm my-2 block">
-								12.12.2024
-							</span>
-							<h3 className="text-[#010101] font-semibold text-xl">
-								Porady: Jak wybrać drzwi wejściowe, które łączą
-								bezpieczeństwo i styl?
-							</h3>
-						</motion.div>
-						<motion.div
-							initial={{ opacity: 0, y: 40 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							className="lg:max-w-[300px]"
-						>
-							<Image
-								src="/img/news4.webp"
-								alt=""
-								width={400}
-								height={400}
-								className="w-full lg:w-[400px]"
-							/>
-							<span className="text-[#010101] font-light text-sm my-2 block">
-								14.11.2024
-							</span>
-							<h3 className="text-[#010101] font-semibold text-xl">
-								5 inspiracji na przeszklone przestrzenie w domu
-							</h3>
-						</motion.div>
+					<div className="w-full grid grid-col-1 lg:grid-cols-4 justify-center gap-10 py-10">
+						<Blog limit="4" />
 					</div>
 				</div>
 			</section>

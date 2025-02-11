@@ -4,9 +4,12 @@ export default function page() {
 	return (
 		<section className="w-full">
 			<div className="w-full bg-[#010101] py-12 lg:py-48">
-				<h1 className="text-white font-bold text-2xl lg:text-6xl text-center">
+				<h1 className="text-white font-bold text-2xl lg:text-6xl text-center pb-2">
 					Kontakt
 				</h1>
+				<p className="text-white text-center">
+					Zadzowń lub napisz do nas - zapraszamy!
+				</p>
 			</div>
 			<div className="w-full py-16 lg:py-32 max-w-[1360px] mx-auto px-4 lg:px-0">
 				<h2 className="text-2xl font-bold pb-4">Nasz adres:</h2>
