@@ -50,12 +50,6 @@ export default function Footer() {
 					</h4>
 					<div className="flex flex-row items-start gap-10">
 						<p className="text-white">
-							<strong>SALON FIRMOWY</strong> <br />
-							ul. Okulickiego 8, <br />
-							38-500 Sanok
-						</p>
-						<p className="text-white">
-							<strong>SALON SPRZEDAŻY</strong> <br />
 							ul. Piastowska 3, <br />
 							38-500 Sanok
 						</p>

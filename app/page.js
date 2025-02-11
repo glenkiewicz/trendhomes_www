@@ -1,49 +1,75 @@
+import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+	const transition = { duration: 4, yoyo: Infinity, ease: "easeInOut" };
 	return (
 		<>
-			<section className="w-full flex flex-col lg:flex-row max-w-[1920px] mx-auto overflow-hidden">
+			<section className="w-full flex flex-col lg:flex-row mx-auto overflow-hidden max-h-[830px]">
 				<div className="w-full lg:w-1/3 bg-[#010101] lg:p-10 flex flex-col justify-center self-stretch relative">
 					<div className="pl-6 relative z-10">
 						<h1 className="text-white text-xl lg:text-4xl">
-							<span className="font-bold text-2xl lg:text-6xl pb-4 block">
+							<motion.div
+								whileInView={{ opacity: 1 }}
+								className="font-bold text-2xl lg:text-6xl pb-4 block opacity-0"
+							>
 								TRENDHOMES
-							</span>
+							</motion.div>
 							<br />
-							Twój partner w kreowaniu nowoczesnych i
-							funkcjonalnych przestrzeni!
+							<motion.div
+								whileInView={{ opacity: 1 }}
+								className="opacity-0"
+							>
+								Twój partner w kreowaniu nowoczesnych i
+								funkcjonalnych przestrzeni!
+							</motion.div>
 						</h1>
-						<Link
-							href="#"
-							className="text-[#010101] my-10 px-6 py-4 bg-white max-w-[280px] uppercase font-bold flex items-center justify-center"
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
 						>
-							Zobacz nasze produkty
-						</Link>
+							<Link
+								href="#"
+								className="relative overflow-hidden transition-all duration-500 text-white my-10 px-6 py-4 bg-[#F7902B] max-w-[280px] uppercase font-bold flex items-center justify-center before:block before:absolute before:top-0 before:-left-[100%] before:w-full before:h-full before:bg-white hover:before:left-0 before:duration-500 before:z-0 hover:ease-in-out hover:text-[#101010]"
+							>
+								<span className="z-10">
+									Zobacz nasze produkty
+								</span>
+							</Link>
+						</motion.div>
 					</div>
-					<div className="w-0 h-0 border-t-[53.25rem] border-t-transparent border-l-[175px] border-l-[#010101] border-b-[0px] border-b-transparent absolute top-0 -right-[175px] z-0"></div>
+					<div className="w-0 h-0 border-t-[53.25rem] border-t-transparent border-l-[175px] border-l-[#010101] border-b-[0px] border-b-transparent absolute top-0 -right-[175px] z-0 "></div>
 				</div>
-				<div className="w-full lg:w-2/3 self-stretch">
+				<div className="w-full lg:w-2/3 flex self-stretch justify-end ">
 					<Image
-						src="/img/hero.avif"
-						width={1280}
-						height={854}
+						src="/img/hero.webp"
+						width={2500}
+						height={1666}
 						alt=""
-						className="h-full object-cover"
+						className="object-cover w-full"
 					/>
 				</div>
 			</section>
 			<section className="w-full px-4 lg:px-0 ">
 				<div className="w-full max-w-[1360px] mx-auto py-16 lg:py-32">
-					<h2 className="text-center font-bold text-4xl uppercase">
-						Nasze produkty
-					</h2>
-					<p className="text-center">
-						Zobacz w czym specjalizujemy się od lat
-					</p>
+					<motion.div
+						initial={{ opacity: 0, y: 40 }}
+						whileInView={{ opacity: 1, y: 0 }}
+					>
+						<h2 className="text-center font-bold text-4xl uppercase">
+							Nasze produkty
+						</h2>
+						<p className="text-center">
+							Zobacz w czym specjalizujemy się od lat
+						</p>
+					</motion.div>
 					<div className="w-full flex flex-col lg:flex-row flex-wrap justify-center gap-10 py-10">
-						<div className="relative shadow-lg">
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="relative shadow-lg"
+						>
 							<h3 className="font-bold text-2xl absolute bottom-0 left-0 bg-white px-4 py-2 drop-shadow-lg">
 								Okna
 							</h3>
@@ -54,8 +80,12 @@ export default function Home() {
 								height={400}
 								className="w-full lg:w-[400px] p-1"
 							/>
-						</div>
-						<div className="relative shadow-lg">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="relative shadow-lg"
+						>
 							<h3 className="font-bold text-2xl absolute bottom-0 left-0 bg-white px-4 py-2 drop-shadow-lg">
 								Drzwi
 							</h3>
@@ -66,10 +96,14 @@ export default function Home() {
 								height={400}
 								className="w-full lg:w-[400px] p-1"
 							/>
-						</div>
-						<div className="relative shadow-lg">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="relative shadow-lg"
+						>
 							<h3 className="font-bold text-2xl absolute bottom-0 left-0 bg-white px-4 py-2 drop-shadow-lg">
-								Rolety zewnętrzne
+								Rolety i żaluzje
 							</h3>
 							<Image
 								src="/img/rolety.webp"
@@ -78,8 +112,12 @@ export default function Home() {
 								height={400}
 								className="w-full lg:w-[400px]"
 							/>
-						</div>
-						<div className="relative shadow-lg">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="relative shadow-lg"
+						>
 							<h3 className="font-bold text-2xl absolute bottom-0 left-0 bg-white px-4 py-2 drop-shadow-lg">
 								Bramy garażowe
 							</h3>
@@ -90,8 +128,12 @@ export default function Home() {
 								height={400}
 								className="w-full lg:w-[400px] p-1"
 							/>
-						</div>
-						<div className="relative shadow-lg">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="relative shadow-lg"
+						>
 							<h3 className="font-bold text-2xl absolute bottom-0 left-0 bg-white px-4 py-2 drop-shadow-lg">
 								Systemy przesuwne HS
 							</h3>
@@ -102,19 +144,24 @@ export default function Home() {
 								height={400}
 								className="w-full lg:w-[400px] p-1"
 							/>
-						</div>
-						<div className="relative shadow-lg">
+						</motion.div>
+
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="relative shadow-lg"
+						>
 							<h3 className="font-bold text-2xl absolute bottom-0 left-0 bg-white px-4 py-2 drop-shadow-lg">
-								Żaluzje fasadowe
+								Pergole
 							</h3>
 							<Image
-								src="/img/zaluzje_fasadowe.webp"
+								src="/img/pergole.webp"
 								alt=""
 								width={400}
 								height={400}
 								className="w-full lg:w-[400px] p-1"
 							/>
-						</div>
+						</motion.div>
 					</div>
 				</div>
 			</section>
@@ -127,7 +174,11 @@ export default function Home() {
 								<br />
 								TRENDHOMES?
 							</h2>
-							<div className="flex flex-row justify-start items-center">
+							<motion.div
+								initial={{ opacity: 0, y: 40 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								className="flex flex-row justify-start items-center"
+							>
 								<div className="w-10 h-10 min-w-10 flex items-center justify-center text-[#010101] font-bold rounded-full bg-white mr-4">
 									1.
 								</div>
@@ -136,8 +187,12 @@ export default function Home() {
 									produkty tworzymy z materiałów najwyższej
 									klasy, zapewniając ich trwałość na lata.
 								</p>
-							</div>
-							<div className="flex flex-row items-center">
+							</motion.div>
+							<motion.div
+								initial={{ opacity: 0, y: 40 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								className="flex flex-row items-center"
+							>
 								<div className="w-10 h-10 min-w-10 flex items-center justify-center text-[#010101] font-bold rounded-full bg-white mr-4">
 									2.
 								</div>
@@ -148,8 +203,12 @@ export default function Home() {
 									– od doradztwa i pomiaru, przez projekt, po
 									profesjonalny montaż.
 								</p>
-							</div>
-							<div className="flex flex-row items-center">
+							</motion.div>
+							<motion.div
+								initial={{ opacity: 0, y: 40 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								className="flex flex-row items-center"
+							>
 								<div className="w-10 h-10 min-w-10 flex items-center justify-center text-[#010101] font-bold rounded-full bg-white mr-4">
 									3.
 								</div>
@@ -158,8 +217,12 @@ export default function Home() {
 									oferujemy gwarancję na wszystkie nasze
 									produkty oraz serwis posprzedażowy.
 								</p>
-							</div>
-							<div className="flex flex-row items-center">
+							</motion.div>
+							<motion.div
+								initial={{ opacity: 0, y: 40 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								className="flex flex-row items-center"
+							>
 								<div className="w-10 h-10 min-w-10 flex items-center justify-center text-[#010101] font-bold rounded-full bg-white mr-4">
 									4.
 								</div>
@@ -168,7 +231,7 @@ export default function Home() {
 									indywidualne podejście pozwala nam na
 									realizację projektów skrojonych na miarę.
 								</p>
-							</div>
+							</motion.div>
 						</div>
 					</div>
 					<div className="w-full lg:w-1/3">
@@ -231,7 +294,11 @@ export default function Home() {
 						Zobacz nasze realizacje z których jesteśmy dumni!
 					</p>
 					<div className="w-full flex flex-row flex-wrap  justify-center lg:flex-nowrap py-12 gap-4 items-center">
-						<div className="w-80 h-80">
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="w-80 h-80"
+						>
 							<Image
 								src="/img/realizacje/1.webp"
 								alt=""
@@ -239,8 +306,12 @@ export default function Home() {
 								height={400}
 								className="object-cover aspect-[320/320]"
 							/>
-						</div>
-						<div className="w-96 h-96">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="w-96 h-96"
+						>
 							<Image
 								src="/img/realizacje/2.webp"
 								alt=""
@@ -248,8 +319,12 @@ export default function Home() {
 								height={400}
 								className="object-cover aspect-[384/384]"
 							/>
-						</div>
-						<div className="w-80 h-80">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="w-80 h-80"
+						>
 							<Image
 								src="/img/realizacje/3.webp"
 								alt=""
@@ -257,8 +332,12 @@ export default function Home() {
 								height={400}
 								className="object-cover aspect-[320/320]"
 							/>
-						</div>
-						<div className="w-96 h-96">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="w-96 h-96"
+						>
 							<Image
 								src="/img/realizacje/4.webp"
 								alt=""
@@ -266,8 +345,12 @@ export default function Home() {
 								height={400}
 								className="object-cover aspect-[384/384]"
 							/>
-						</div>
-						<div className="w-80 h-80">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="w-80 h-80"
+						>
 							<Image
 								src="/img/realizacje/5.webp"
 								alt=""
@@ -275,13 +358,13 @@ export default function Home() {
 								height={400}
 								className="object-cover aspect-[320/320]"
 							/>
-						</div>
+						</motion.div>
 					</div>
 					<Link
-						href="/realizacje"
-						className="text-[#010101] px-6 py-4 bg-white max-w-[340px] uppercase font-bold flex items-center justify-center mx-auto"
+						href="#"
+						className="relative overflow-hidden transition-all duration-500 text-white my-10 px-6 py-4 bg-[#F7902B] max-w-[320px] mx-auto uppercase font-bold flex items-center justify-center before:block before:absolute before:top-0 before:-left-[100%] before:w-full before:h-full before:bg-white hover:before:left-0 before:duration-500 before:z-0 hover:ease-in-out hover:text-[#101010]"
 					>
-						Zobacz wszystkie realizacje
+						<span className="z-10">Zobacz więcej realizacji</span>
 					</Link>
 				</div>
 			</section>
@@ -294,7 +377,11 @@ export default function Home() {
 						Przeczytaj jakie mamy dla Ciebie porady i inspiracje
 					</p>
 					<div className="w-full flex flex-col lg:flex-row flex-wrap justify-center gap-10 py-10">
-						<div className="lg:max-w-[300px]">
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="lg:max-w-[300px]"
+						>
 							<Image
 								src="/img/news1.webp"
 								alt=""
@@ -309,8 +396,12 @@ export default function Home() {
 								Nowoczesne trendy w stolarce okiennej i
 								drzwiowej na rok 2025
 							</h3>
-						</div>
-						<div className="lg:max-w-[300px]">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="lg:max-w-[300px]"
+						>
 							<Image
 								src="/img/news2.webp"
 								alt=""
@@ -325,8 +416,12 @@ export default function Home() {
 								Jak dobrać okna do stylu domu? Poradnik dla
 								każdego
 							</h3>
-						</div>
-						<div className="lg:max-w-[300px]">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="lg:max-w-[300px]"
+						>
 							<Image
 								src="/img/news3.webp"
 								alt=""
@@ -341,8 +436,12 @@ export default function Home() {
 								Porady: Jak wybrać drzwi wejściowe, które łączą
 								bezpieczeństwo i styl?
 							</h3>
-						</div>
-						<div className="lg:max-w-[300px]">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							className="lg:max-w-[300px]"
+						>
 							<Image
 								src="/img/news4.webp"
 								alt=""
@@ -356,7 +455,7 @@ export default function Home() {
 							<h3 className="text-[#010101] font-semibold text-xl">
 								5 inspiracji na przeszklone przestrzenie w domu
 							</h3>
-						</div>
+						</motion.div>
 					</div>
 				</div>
 			</section>
