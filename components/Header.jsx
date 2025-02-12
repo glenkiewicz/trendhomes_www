@@ -41,7 +41,7 @@ export default function () {
 			</Link>
 			<nav className="hidden lg:block h-24">
 				<ul className="flex items-center text-white font-bold h-full">
-					<li className="group h-full flex items-center hover:bg-white hover:bg-opacity-95 px-8">
+					<li className="group h-full flex items-center hover:bg-white hover:bg-opacity-95 hover:shadow-2xl px-8">
 						<Link
 							href="/produkty"
 							className={` group-hover:text-[#F7902B] ${
@@ -50,7 +50,7 @@ export default function () {
 						>
 							Produkty
 						</Link>
-						<nav className="hidden group-hover:block absolute top-[100%] left-0 w-full bg-white bg-opacity-95 py-6">
+						<nav className="hidden group-hover:block absolute top-[100%] left-0 w-full bg-white bg-opacity-95 py-6 shadow-2xl">
 							<ul className="flex flex-row justify-center items-center space-x-14">
 								<li>
 									<Link
@@ -314,7 +314,7 @@ export default function () {
 							</ul>
 						</nav>
 					</li>
-					<li className="group h-full flex items-center hover:bg-white px-8">
+					<li className="group h-full flex items-center hover:bg-white hover:shadow-2xl px-8">
 						<Link
 							href="/o-nas"
 							className={`group-hover:text-[#F7902B] ${
@@ -324,7 +324,7 @@ export default function () {
 							O nas
 						</Link>
 					</li>
-					<li className="group h-full flex items-center hover:bg-white hover:bg-opacity-95 px-8">
+					<li className="group h-full flex items-center hover:bg-white hover:shadow-2xl hover:bg-opacity-95 px-8">
 						<Link
 							href="/realizacje"
 							className={`group-hover:text-[#F7902B] ${
@@ -336,7 +336,7 @@ export default function () {
 							Realizacje
 						</Link>
 					</li>
-					<li className="group h-full flex items-center hover:bg-white hover:bg-opacity-95 px-8">
+					<li className="group h-full flex items-center hover:bg-white hover:shadow-2xl hover:bg-opacity-95 px-8">
 						<Link
 							href="/blog"
 							className={`group-hover:text-[#F7902B] ${
@@ -346,7 +346,7 @@ export default function () {
 							Blog
 						</Link>
 					</li>
-					<li className="group h-full flex items-center hover:bg-white hover:bg-opacity-95 px-8">
+					<li className="group h-full flex items-center hover:bg-white hover:shadow-2xl hover:bg-opacity-95 px-8">
 						<Link
 							href="/kontakt"
 							className={`group-hover:text-[#F7902B] ${
