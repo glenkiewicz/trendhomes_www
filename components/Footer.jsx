@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MfCodeLogo from "./MfCodeLogo";
 export default function Footer() {
 	return (
 		<footer className="w-full px-4 lg:px-0 py-16 lg:py-32 bg-[#010101]">
@@ -76,10 +77,14 @@ export default function Footer() {
 						</li>
 					</ul>
 				</nav>
-				<p className="text-white font-light uppercase">
-					Realizacja:{" "}
-					<Link href="#" className="font-bold">
-						GL
+				<p className="text-white font-light uppercase flex items-center">
+					<span>Realizacja: </span>
+					<Link
+						href="https://mfcode.pl"
+						target="_blank"
+						className="font-bold"
+					>
+						<MfCodeLogo />
 					</Link>
 				</p>
 			</div>
