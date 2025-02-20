@@ -51,7 +51,7 @@ module.exports = {
 				},
 			},
 			backgroundImage: {
-				hero: 'url("/hero.avif")',
+				page: 'url("/img/hero.webp")',
 			},
 			borderRadius: {
 				lg: "var(--radius)",

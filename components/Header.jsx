@@ -41,7 +41,7 @@ export default function () {
 			</Link>
 			<nav className="hidden lg:block h-24">
 				<ul className="flex items-center text-white font-bold h-full">
-					<li className="group h-full flex items-center hover:bg-white hover:bg-opacity-95 hover:shadow-2xl px-8">
+					<li className="group h-full flex items-center hover:bg-white px-8 ">
 						<Link
 							href="/produkty"
 							className={` group-hover:text-[#F7902B] ${
@@ -50,9 +50,9 @@ export default function () {
 						>
 							Produkty
 						</Link>
-						<nav className="hidden group-hover:block absolute top-[100%] left-0 w-full bg-white bg-opacity-95 py-6 shadow-2xl">
-							<ul className="flex flex-row justify-center items-center space-x-14">
-								<li>
+						<nav className="hidden group-hover:block absolute top-[100%] left-0 w-full bg-white py-6 shadow-2xl">
+							<ul className="flex flex-row justify-center items-center">
+								<li className="flex flex-col items-center justify-center px-6 py-4">
 									<Link
 										href="/okna"
 										className="flex flex-col items-center"
@@ -95,7 +95,7 @@ export default function () {
 										</svg>
 									</Link>
 								</li>
-								<li className="flex flex-col items-center">
+								<li className="flex flex-col items-center border-l justify-center px-6 py-4">
 									<Link
 										href="/drzwi"
 										className="flex flex-col items-center"
@@ -127,7 +127,7 @@ export default function () {
 										</svg>
 									</Link>
 								</li>
-								<li className="flex flex-col items-center">
+								<li className="flex flex-col items-center border-l px-6 py-4">
 									<Link
 										href="/rolety-i-zaluzje"
 										className="flex flex-col items-center"
@@ -180,7 +180,7 @@ export default function () {
 										</svg>
 									</Link>
 								</li>
-								<li className="flex flex-col items-center">
+								<li className="flex flex-col items-center border-l px-6 py-4">
 									<Link
 										href="/bramy-garazowe"
 										className="flex flex-col items-center"
@@ -221,7 +221,7 @@ export default function () {
 										</svg>
 									</Link>
 								</li>
-								<li className="flex flex-col items-center">
+								<li className="flex flex-col items-center border-l px-6 py-4">
 									<Link
 										href="/systemy-przesuwne-hs"
 										className="flex flex-col items-center"
@@ -264,7 +264,7 @@ export default function () {
 										</svg>
 									</Link>
 								</li>
-								<li className="flex flex-col items-center">
+								<li className="flex flex-col items-center border-l px-6 py-4">
 									<Link
 										href="/pergole"
 										className="flex flex-col items-center"
@@ -356,7 +356,7 @@ export default function () {
 							Kontakt
 						</Link>
 					</li>
-					<li>
+					<li className="px-8">
 						<Link
 							href="https://www.facebook.com/SanokTrendhomes/"
 							target="_blank"
